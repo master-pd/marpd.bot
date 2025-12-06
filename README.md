@@ -25,5 +25,5 @@
 
 1. **Clone the repository:**
 ```bash
-git clone https://github.com/yourusername/MAR-PD-Bot.git
+git clone https://github.com/master-pd/marpd.bot.git
 cd MAR-PD-Bot
