@@ -1,0 +1,42 @@
+# Core Dependencies
+python-telegram-bot==20.7
+firebase-admin==6.5.0
+python-dotenv==1.0.0
+
+# Database
+pymongo==4.5.0  # Optional, if using MongoDB
+redis==5.0.1    # Optional, for caching
+
+# Utilities
+Pillow==10.1.0  # For image processing
+qrcode==7.4.2   # For QR code generation
+pydub==0.25.1   # For audio processing
+
+# Web Dashboard
+fastapi==0.104.1
+uvicorn==0.24.0
+jinja2==3.1.2
+
+# Async & Performance
+aiohttp==3.9.1
+asyncio-mqtt==0.16.1
+
+# Security
+cryptography==41.0.7
+bcrypt==4.1.2
+
+# Monitoring & Logging
+psutil==5.9.7
+structlog==23.1.0
+
+# Date & Time
+pytz==2023.3
+tzlocal==5.0.1
+
+# Development
+black==23.11.0
+flake8==6.1.0
+pytest==7.4.3
+
+# Production
+gunicorn==21.2.0

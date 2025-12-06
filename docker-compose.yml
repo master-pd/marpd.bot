@@ -1,0 +1,47 @@
+version: '3.8'
+
+services:
+  marpd-bot:
+    build: .
+    container_name: marpd-bot
+    restart: unless-stopped
+    volumes:
+      - ./data:/app/data
+      - ./logs:/app/logs
+      - ./backups:/app/backups
+      - ./.env:/app/.env
+    environment:
+      - TZ=Asia/Dhaka
+    networks:
+      - marpd-network
+
+  # Optional: Add Redis for caching
+  redis:
+    image: redis:alpine
+    container_name: marpd-redis
+    restart: unless-stopped
+    volumes:
+      - redis-data:/data
+    networks:
+      - marpd-network
+
+  # Optional: Add MongoDB for additional storage
+  mongodb:
+    image: mongo:latest
+    container_name: marpd-mongodb
+    restart: unless-stopped
+    volumes:
+      - mongodb-data:/data/db
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=admin
+      - MONGO_INITDB_ROOT_PASSWORD=password123
+    networks:
+      - marpd-network
+
+volumes:
+  redis-data:
+  mongodb-data:
+
+networks:
+  marpd-network:
+    driver: bridge
