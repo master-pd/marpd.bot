@@ -4,18 +4,18 @@ firebase-admin==6.5.0
 python-dotenv==1.0.0
 
 # Utilities (optional, only if bot uses images/audio/QR)
-Pillow==10.1.0
+Pillow==10.3.0
 qrcode==7.4.2
 pydub==0.25.1
 
 # Async & HTTP
-aiohttp==3.9.1
+aiohttp==3.12.14
 
 # Web Dashboard (only if dashboard is used)
 fastapi==0.104.1
 uvicorn==0.24.0
-jinja2==3.1.2
+jinja2==3.1.6
 
 # Security
-cryptography==41.0.7
+cryptography==44.0.1
 bcrypt==4.1.2
